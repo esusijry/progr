@@ -10,14 +10,20 @@ namespace task02
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите длину стороны правильного икосаэдра");
-            double a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите первое число");
+            var a = double.Parse(Console.ReadLine());
 
-            double S = 5 * Math.Sqrt(3) * a * a;
-            double V = (5.0 / 12.0) * (3 + Math.Sqrt(5)) * a * a * a;
+            Console.WriteLine("Введите второе число");
+            var b = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Площадь поверхности: {S}");
-            Console.WriteLine($"Объем: {V}");
+            Console.WriteLine("Введите третье число");
+            var c = double.Parse(Console.ReadLine());
+
+            var A = (a + b + c) / 3;
+            var G = Math.Pow(a * b *c, 1.0 / 3.0);
+
+            Console.WriteLine("Среднее арифметическое: " + A);
+            Console.WriteLine("Среднее геометрическое: " + G);
         }
     }
 }
